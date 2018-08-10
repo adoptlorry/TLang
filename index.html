@@ -6,14 +6,19 @@
   <body>
     <script>
       var pubnub = new PubNub({
-	subscribe_key: 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe'
-	});
+				subscribe_key: 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe'
+				});
       pubnub.subscribe({
         channel: 'pubnub-twitter',
         message: function(msg) {
-          // code to deal with message here
+          console.log(msg.text);
         }
       });
     </script>
+    <ul id="tweets">
+			
+			
+			
+		</ul>
   </body>
 </html>
