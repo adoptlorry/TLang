@@ -11,15 +11,7 @@
 		}).subscribe({
 			channel: 'pubnub-twitter',
 			message: function(msg) {
-				twitterMessage = msg.text;
-				
-				var letters = getSymbols(twitterMessage);
-				
-				if (alphabet.length >= 10240)
-					alphabet = alphabet.slice(alphabet.length - letters.length);
-				
-				for (var i = 0; i < letters.length; i++)
-					alphabet.push(letters[i]);
+				console.log(msg.text);
 			}
 		});
     </script>
